@@ -135,9 +135,6 @@ async function deleteTodo(todoId) {
     }
 }
 
-/**
-
- */
 function displayTodos(todos) {
     const todosList = document.getElementById('todos-list');
     const emptyState = document.getElementById('empty-state');
@@ -154,7 +151,6 @@ function displayTodos(todos) {
     
     emptyState.style.display = 'none';
     
-
     todosList.innerHTML = todos.map(todo => createTodoHTML(todo)).join('');
     
     // Attach event listeners
@@ -174,8 +170,6 @@ function displayTodos(todos) {
     });
 }
 
-/**
- */
 function createTodoHTML(todo) {
     const date = new Date(todo.created_at);
     const formattedDate = date.toLocaleDateString('en-US', {
@@ -189,7 +183,6 @@ function createTodoHTML(todo) {
     const completedClass = todo.completed ? 'completed' : '';
     const buttonText = todo.completed ? '↩️ Undo' : '✓ Complete';
     
-
     return `
         <div class="todo-item ${completedClass}">
             <div class="todo-header">
@@ -250,11 +243,5 @@ function clearForm() {
     document.getElementById('todo-description').value = '';
     document.getElementById('todo-title').focus();
 }
-
-console.log('');
-
-/**
-
- */
 
 // Made with Bob

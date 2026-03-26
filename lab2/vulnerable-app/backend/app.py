@@ -9,7 +9,6 @@ from datetime import datetime
 
 app = Flask(__name__)
 
-# VULNERABILITY: Using hardcoded secret from config
 app.config["SQLALCHEMY_DATABASE_URI"] = DATABASE_URL
 app.config["SECRET_KEY"] = SECRET_KEY
 app.config["SQLALCHEMY_TRACK_MODIFICATIONS"] = False
@@ -25,7 +24,6 @@ def get_todos():
         todos = Todo.query.order_by(Todo.created_at.desc()).all()
         return jsonify([todo.to_dict() for todo in todos]), 200
     except Exception as e:
-        # VULNERABILITY: Exposing internal error details
         return jsonify({"error": str(e), "type": type(e).__name__}), 500
 
 
@@ -57,7 +55,6 @@ def create_todo():
         return jsonify(todo.to_dict()), 201
     except Exception as e:
         db.session.rollback()
-        # VULNERABILITY: Exposing stack trace
         return jsonify({"error": str(e), "trace": repr(e)}), 500
 
 
@@ -125,10 +122,7 @@ def search_todos():
 
 @app.route("/api/admin/config", methods=["GET"])
 def get_config():
-    """
-    Admin endpoint to view configuration
-    VULNERABILITY: Exposing sensitive configuration
-    """
+    """Admin endpoint to view configuration"""
 
     return (
         jsonify(
@@ -151,7 +145,7 @@ def health_check():
             {
                 "status": "healthy",
                 "timestamp": datetime.utcnow().isoformat(),
-                "version": "1.0.0-vulnerable",
+                "version": "1.0.0",
                 "database": DATABASE_URL,
             }
         ),
