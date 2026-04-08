@@ -2,18 +2,17 @@
 
 Welcome to the Bob Bootcamp hands-on labs! This comprehensive training series will teach you how to leverage IBM Bob's AI-powered development capabilities through practical, real-world exercises.
 
+
 ## 🎯 Overview
 
-These labs are designed to give you hands-on experience with Bob's core features through six progressive exercises:
+These labs are designed to give you hands-on experience with Bob's core features through four progressive exercises:
 
 1. **Lab 1: Building Applications** - Create a full-stack todo application
 2. **Lab 2: Security & Code Analysis** - Identify and fix security vulnerabilities
 3. **Lab 3: Code Translation** - Translate Python code to JavaScript
 4. **Lab 4: BobShell & CLI** - Master command-line automation
-5. **Lab 5: Java Modernization** - Upgrade legacy Java applications
-6. **Lab 6: MCP & Custom Modes** - Create custom tools and modes
 
-**Total Learning Time**: ~5 hours
+**Total Learning Time**: ~3 hours
 
 ## 🚀 What You'll Learn
 
@@ -26,8 +25,6 @@ These labs are designed to give you hands-on experience with Bob's core features
 - **Code Analysis**: Understanding and improving existing codebases
 - **Security Awareness**: Identifying and fixing vulnerabilities
 - **Code Translation**: Converting code between languages
-- **Custom Modes**: Creating specialized Bob modes
-- **MCP Development**: Building custom MCP servers
 
 ### Technical Skills
 - Full-stack web development (Python Flask + JavaScript)
@@ -35,8 +32,6 @@ These labs are designed to give you hands-on experience with Bob's core features
 - Security best practices (SQL injection, XSS, secrets management)
 - Cross-language development patterns
 - Command-line automation and scripting
-- Java modernization (Java 8 → 17/21)
-- MCP server development
 - CI/CD integration
 
 ## 📋 Prerequisites
@@ -48,7 +43,6 @@ Before starting these labs, ensure you have:
 - **Node.js 14+** - [Download](https://nodejs.org/)
 - **Git 2.x+** - [Download](https://git-scm.com/)
 - **Bob** - Installed and configured
-- **Java 17+** - [Download](https://adoptium.net/) (for Lab 5)
 - **Text Editor/IDE** - VS Code recommended
 
 ### Required Knowledge
@@ -58,7 +52,6 @@ Before starting these labs, ensure you have:
 - REST API concepts
 - Git basics
 - Command line usage
-- Java basics (for Lab 5)
 
 ### Account Setup
 - GitHub account (for Lab 1)
@@ -160,53 +153,6 @@ Master Bob's command-line interface for automation and integration into developm
 
 **[Start Lab 4 →](lab4/README.md)**
 
----
-
-### 🔴 Advanced Track (Labs 5-6)
-
-#### Lab 5: Java Application Modernization (60 minutes)
-**Focus**: Legacy Code Modernization
-
-Upgrade a legacy Java 8 application to modern Java 17/21 with Bob's assistance.
-
-**What You'll Modernize**:
-- Java version upgrade (8 → 17/21)
-- Deprecated API replacement
-- Modern Java features (records, var, text blocks)
-- Dependency updates
-- Performance improvements
-
-**Bob Features**:
-- ✅ Legacy code analysis
-- ✅ Modernization planning
-- ✅ Automated refactoring
-- ✅ Testing and verification
-- ✅ Best practices application
-
-**[Start Lab 5 →](lab5/README.md)**
-
----
-
-#### Lab 6: Creating MCP Server & Custom Mode (60 minutes)
-**Focus**: Extensibility and Customization
-
-Build your own MCP server and create a custom Bob mode for specialized tasks.
-
-**What You'll Create**:
-- Custom MCP server with tools
-- Server resources
-- Custom Bob mode configuration
-- Tool integration
-- Deployment setup
-
-**Bob Features**:
-- ✅ MCP protocol understanding
-- ✅ Server development
-- ✅ Custom mode creation
-- ✅ Tool implementation
-- ✅ Integration testing
-
-**[Start Lab 6 →](lab6/README.md)**
 
 ---
 
@@ -218,24 +164,18 @@ graph TB
     L1 --> L2[Lab 2: Security]
     L2 --> L3[Lab 3: Translation]
     L3 --> L4[Lab 4: BobShell]
-    L4 --> L5[Lab 5: Java Modernization]
-    L5 --> L6[Lab 6: MCP & Modes]
-    L6 --> Complete[Completion]
+    L4 --> Complete[Completion]
     
     L1 -.-> Beginner[Beginner Level]
     L2 -.-> Beginner
     L3 -.-> Intermediate[Intermediate Level]
     L4 -.-> Intermediate
-    L5 -.-> Advanced[Advanced Level]
-    L6 -.-> Advanced
     
     style Start fill:#e1f5ff
     style L1 fill:#e1f5ff
     style L2 fill:#e1f5ff
     style L3 fill:#fff4e1
     style L4 fill:#fff4e1
-    style L5 fill:#ffe1e1
-    style L6 fill:#ffe1e1
     style Complete fill:#e1ffe1
 ```
 
@@ -243,17 +183,14 @@ graph TB
 1. **Complete prerequisites** - Ensure all software is installed
 2. **Labs 1-2 (Beginner)** - Build foundational understanding
 3. **Labs 3-4 (Intermediate)** - Expand your skills
-4. **Labs 5-6 (Advanced)** - Master advanced techniques
-5. **Review and practice** - Apply to your own projects
+4. **Review and practice** - Apply to your own projects
 
 ### Time Commitment
 - **Lab 1**: 45 minutes
 - **Lab 2**: 45 minutes
 - **Lab 3**: 45 minutes
 - **Lab 4**: 45 minutes
-- **Lab 5**: 60 minutes
-- **Lab 6**: 60 minutes
-- **Total**: ~5 hours (including breaks)
+- **Total**: ~3 hours (including breaks)
 
 ## 📖 Additional Resources
 
@@ -293,13 +230,6 @@ You'll know you've successfully completed the bootcamp when you can:
 - [ ] Script repetitive development tasks
 - [ ] Apply Bob to your own projects
 
-### After Labs 5-6 (Advanced)
-- [ ] Modernize legacy applications
-- [ ] Create custom MCP servers
-- [ ] Design custom Bob modes
-- [ ] Integrate Bob into complex workflows
-- [ ] Extend Bob's capabilities
-
 ## 🎓 What's Next?
 
 After completing these labs, you can:
@@ -309,8 +239,7 @@ After completing these labs, you can:
 3. **Join the Community**: Share your experience and help others
 4. **Build Your Portfolio**: Showcase your Bob-powered projects
 5. **Continue Learning**: Explore additional MCP servers and integrations
-6. **Create Custom Tools**: Build your own MCP servers and modes
-7. **Contribute**: Help improve Bob and its ecosystem
+6. **Contribute**: Help improve Bob and its ecosystem
 
 ## 🤝 Contributing
 
@@ -342,7 +271,6 @@ Ready to begin? Here's how to get started:
    python --version    # Should be 3.8+
    node --version      # Should be 14+
    git --version       # Should be 2.x+
-   java --version      # Should be 17+ (for Lab 5)
    ```
 
 2. **Clone or Download**
@@ -372,8 +300,6 @@ Track your progress through the bootcamp:
 - [ ] Lab 2: Security Analysis ✅
 - [ ] Lab 3: Code Translation ✅
 - [ ] Lab 4: BobShell & CLI ✅
-- [ ] Lab 5: Java Modernization ✅
-- [ ] Lab 6: MCP & Custom Modes ✅
 
 **Legend**: ✅ Complete | 🚧 In Progress | ⬜ Not Started
 
@@ -385,5 +311,5 @@ Track your progress through the bootcamp:
 
 ---
 
-*Last Updated: December 2025*  
-*Version: 2.0 - Extended Series*
+*Last Updated: March 2026*
+*Version: 1.0 - Core Series (Labs 1-4)*
